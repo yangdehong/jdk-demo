@@ -1,0 +1,14 @@
+这两者最主要的区别在于submit的task不一定是按照加入自己维护的list顺序完成的。
+从list中遍历的每个Future对象并不一定处于完成状态，这时调用get()方法就会被阻塞住，
+如果系统是设计成每个线程完成后就能根据其结果继续做后面的事，这样对于处于list后面的但是先完成的线程就会增加了额外的等待时间。
+而CompletionService的实现是维护一个保存Future对象的BlockingQueue。
+只有当这个Future对象状态是结束的时候，才会加入到这个Queue中，take()方法其实就是Producer-Consumer中的Consumer。
+它会从Queue中取出Future对象，如果Queue是空的，就会阻塞在那里，直到有完成的Future对象加入到Queue中。
+所以，先完成的必定先被取出。这样就减少了不必要的等待时间
+
+1、相比ExecutorService，CompletionService可以更精确和简便地完成异步任务的执行
+2、CompletionService的一个实现是ExecutorCompletionService，它是Executor和BlockingQueue功能的融合体，
+    Executor完成计算任务，BlockingQueue负责保存异步任务的执行结果
+3、在执行大量相互独立和同构的任务时，可以使用CompletionService
+4、CompletionService可以为任务的执行设置时限，
+    主要是通过BlockingQueue的poll(long time,TimeUnit unit)为任务执行结果的取得限制时间，如果没有完成就取消任务

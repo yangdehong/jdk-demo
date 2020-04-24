@@ -3,13 +3,13 @@ package com.ydh.redsheep.test;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 public class SteamTest {
 
     public static void main(String[] args) {
-//        steamTest();
-        optionalTest();
+        steamTest();
+//        optionalTest();
     }
 
     public static void optionalTest() {
@@ -28,15 +28,17 @@ public class SteamTest {
 //        list.parallelStream().forEach(item -> {
 //            System.out.println(item);
 //        });
-//        // limit-指定数量，sorted-排序
-//        Random random = new Random();
-//        random.ints().limit(10).sorted().forEach(System.out::println);
+        // limit-指定数量，sorted-排序
+        List<String> collect = list.stream().sorted((s1, s2) -> {
+            return s1.compareTo(s2);
+        }).collect(Collectors.toList());
+        System.out.println(collect);
 //        // 条件过滤
 //        list.stream().filter(item -> item.contains("a")).forEach(System.out::println);
 //        // map用于映射每个元素到对应的结果
 //        list.stream().map(s -> s + "test").forEach(System.out::println);
-        // flatMap，同样的代码和map比较结果就知道了
-        list.stream().flatMap(s -> Stream.of(s.split(" "))).forEach(System.out::println);
+//        // flatMap，同样的代码和map比较结果就知道了
+//        list.stream().flatMap(s -> Stream.of(s.split(" "))).forEach(System.out::println);
 
     }
 
