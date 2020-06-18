@@ -1,4 +1,4 @@
-package com.ydh.redsheep.thread.pool.mythread;
+package com.ydh.redsheep.thread.pool.mypoll;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;

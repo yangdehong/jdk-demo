@@ -1,4 +1,4 @@
-package com.ydh.redsheep.test;
+package com.ydh.redsheep;
 
 import com.sun.mail.util.MailSSLSocketFactory;
 

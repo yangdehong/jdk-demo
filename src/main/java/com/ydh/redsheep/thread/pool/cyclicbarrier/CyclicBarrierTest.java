@@ -1,6 +1,6 @@
 package com.ydh.redsheep.thread.pool.cyclicbarrier;
 
-import com.ydh.redsheep.thread.pool.mythread.MyExecutors;
+import com.ydh.redsheep.thread.pool.mypoll.MyExecutors;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.BrokenBarrierException;

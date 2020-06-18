@@ -1,4 +1,4 @@
-package com.ydh.redsheep.test;
+package com.ydh.redsheep.steam;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,7 +13,7 @@ public class SteamTest {
     }
 
     public static void optionalTest() {
-        Optional o = Optional.of("test");
+        Optional o = Optional.of("steam");
         System.out.println(o.isPresent());
         System.out.println(o.get());
     }
@@ -36,7 +36,7 @@ public class SteamTest {
 //        // 条件过滤
 //        list.stream().filter(item -> item.contains("a")).forEach(System.out::println);
 //        // map用于映射每个元素到对应的结果
-//        list.stream().map(s -> s + "test").forEach(System.out::println);
+//        list.stream().map(s -> s + "steam").forEach(System.out::println);
 //        // flatMap，同样的代码和map比较结果就知道了
 //        list.stream().flatMap(s -> Stream.of(s.split(" "))).forEach(System.out::println);
 
