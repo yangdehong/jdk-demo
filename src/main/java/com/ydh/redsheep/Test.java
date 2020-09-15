@@ -1,11 +1,13 @@
 package com.ydh.redsheep;
 
-import java.util.Date;
+import java.util.Objects;
 
 public class Test {
 
     public static void main(String[] args) throws Exception {
-        System.out.println(new Date("0000-00-00 00:00:00"));
+        Long a = 0L;
+
+        System.out.println(Objects.equals(a, 0L));
 
     }
 
