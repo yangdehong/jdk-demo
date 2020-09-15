@@ -1,6 +1,6 @@
 package com.ydh.redsheep.io.netty.reconnection;
 
-import com.ydh.redsheep.netty.util.Constants;
+import com.ydh.redsheep.io.netty.util.Constants;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

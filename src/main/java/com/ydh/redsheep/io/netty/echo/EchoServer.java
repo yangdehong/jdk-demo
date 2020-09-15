@@ -1,6 +1,6 @@
 package com.ydh.redsheep.io.netty.echo;
 
-import com.ydh.redsheep.netty.util.Constants;
+import com.ydh.redsheep.io.netty.util.Constants;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;

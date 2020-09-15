@@ -1,6 +1,6 @@
 package com.ydh.redsheep.io.netty.echo;
 
-import com.ydh.redsheep.netty.util.Constants;
+import com.ydh.redsheep.io.netty.util.Constants;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
@@ -12,7 +12,6 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
-import io.netty.handler.timeout.ReadTimeoutHandler;
 
 /**
  * @description:

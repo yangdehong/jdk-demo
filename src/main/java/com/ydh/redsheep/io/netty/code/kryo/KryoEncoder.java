@@ -1,6 +1,6 @@
 package com.ydh.redsheep.io.netty.code.kryo;
 
-import com.ydh.redsheep.netty.model.MessageBO;
+import com.ydh.redsheep.io.netty.model.MessageBO;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
