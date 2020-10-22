@@ -1,13 +1,11 @@
 package com.ydh.redsheep;
 
-import java.util.Objects;
-
 public class Test {
 
     public static void main(String[] args) throws Exception {
-        Long a = 0L;
-
-        System.out.println(Objects.equals(a, 0L));
+        Long a = 1L;
+        Long b = 1L;
+        System.out.println(a!=b);
 
     }
 
