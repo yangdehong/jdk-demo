@@ -13,6 +13,7 @@ import java.util.function.Supplier;
 public class FunctionTest {
 
     public static void main(String[] args) {
+        // 都有对的BiXXXXX，区别在于可以使用两个参数
 //        consumerTest();
 //        functionTest();
 //        predicateTest();

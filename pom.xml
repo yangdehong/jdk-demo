@@ -20,6 +20,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.6</version>
+        </dependency>
+
         <!--    protostuff    -->
         <dependency>
             <groupId>io.protostuff</groupId>
