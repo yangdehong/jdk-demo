@@ -322,8 +322,8 @@ public class FtpUtils {
 
     public static void main(String[] args) {
         // 文件路径写为用户建立时 指定的目录
-        FtpUtils.uploadFile("home/ftpFile", "book.xml", "/etl/etldata/inter/ZNWH/delta/20201110");
-        // ftp.downloadFile("/home/ftpFile", "123.png", "E://");
+//        FtpUtils.uploadFile("home/ftpFile", "book.xml", "/etl/etldata/inter/ZNWH/delta/20201110");
+        FtpUtils.downloadFile("/etl/etldata/inter/ZNWH/delta/20201120/", "CST_CONTACT_INFO_20201120_ADD.dat", "/tmp/ftp");
         //ftp.deleteFile("/home/ftpFile", "123.png");
         System.out.println("ok");
     }
