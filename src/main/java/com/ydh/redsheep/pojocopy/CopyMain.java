@@ -1,7 +1,7 @@
-package com.ydh.redsheep.io.copy;
+package com.ydh.redsheep.pojocopy;
 
-import com.ydh.redsheep.io.copy.model.CopyObject;
-import com.ydh.redsheep.io.copy.model.ParentCopyObject;
+import com.ydh.redsheep.pojocopy.model.CopyObject;
+import com.ydh.redsheep.pojocopy.model.ParentCopyObject;
 
 /**
 * 浅拷贝

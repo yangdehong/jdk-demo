@@ -1,4 +1,4 @@
-package com.ydh.redsheep.io.copy.model;
+package com.ydh.redsheep.pojocopy.model;
 
 import java.io.Serializable;
 

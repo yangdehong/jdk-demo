@@ -1,4 +1,4 @@
-package com.ydh.redsheep.io.copy;
+package com.ydh.redsheep.pojocopy;
 
 
 

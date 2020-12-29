@@ -1,4 +1,4 @@
-package com.ydh.redsheep.io.filetest;
+package com.ydh.redsheep.bytestream;
 
 public class Member {
 	private String name;

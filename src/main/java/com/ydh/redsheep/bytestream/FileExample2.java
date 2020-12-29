@@ -1,4 +1,4 @@
-package com.ydh.redsheep.io.filetest;
+package com.ydh.redsheep.bytestream;
 
 import java.io.*;
 
