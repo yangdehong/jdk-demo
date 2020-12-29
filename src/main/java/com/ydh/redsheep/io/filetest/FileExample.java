@@ -1,4 +1,4 @@
-package com.ydh.redsheep.io.test;
+package com.ydh.redsheep.io.filetest;
 
 import java.io.*;
 import java.nio.charset.Charset;
