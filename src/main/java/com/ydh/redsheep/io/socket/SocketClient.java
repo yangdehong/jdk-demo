@@ -12,10 +12,10 @@ import java.net.Socket;
 public class SocketClient {
     public static void main(String args[]) throws Exception {
         // 与服务端建立连接
-        Socket socket = new Socket("127.0.0.1", 8080);
+        Socket socket = new Socket("127.0.0.1", 8888);
         // 建立连接后获得输出流
         OutputStream outputStream = socket.getOutputStream();
-        String message = "我是一个特别好的娃娃";
+        String message = "我是一个同步阻塞的请求";
         socket.getOutputStream().write(message.getBytes("UTF-8"));
         //通过shutdownOutput高速服务器已经发送完数据，后续只能接受数据
         socket.shutdownOutput();

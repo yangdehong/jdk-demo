@@ -2,6 +2,7 @@ package com.ydh.redsheep.io.socket;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -14,7 +15,8 @@ public class SocketServer {
 
     public static void main(String[] args) throws Exception {
         // 监听指定的端口
-        ServerSocket server = new ServerSocket(8080);
+        ServerSocket server = new ServerSocket();
+        server.bind(new InetSocketAddress("127.0.0.1",8888));
         // server将一直等待连接的到来
         System.out.println("server启动");
         while (true) {
