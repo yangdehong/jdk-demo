@@ -1,4 +1,4 @@
-package com.ydh.redsheep.io.rmi.pojo;
+package com.ydh.redsheep.rmi.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package com.ydh.redsheep.io.rmi.server.service.impl;
+package com.ydh.redsheep.rmi.server.service.impl;
 
-import com.ydh.redsheep.io.rmi.pojo.User;
-import com.ydh.redsheep.io.rmi.server.service.HelloService;
+import com.ydh.redsheep.rmi.pojo.User;
+import com.ydh.redsheep.rmi.server.service.HelloService;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

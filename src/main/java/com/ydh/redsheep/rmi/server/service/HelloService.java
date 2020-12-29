@@ -1,7 +1,7 @@
-package com.ydh.redsheep.io.rmi.server.service;
+package com.ydh.redsheep.rmi.server.service;
 
 
-import com.ydh.redsheep.io.rmi.pojo.User;
+import com.ydh.redsheep.rmi.pojo.User;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
