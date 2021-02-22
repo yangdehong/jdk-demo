@@ -23,7 +23,8 @@ public class Bag2 {
         for (int i = 1; i <= values.length; i++) {
             for (int j = 1; j <= max; j++) {
                 //选择的物品超过最大承重
-                if (weights[i - 1] > j) {
+                int weight = weights[i - 1];
+                if (weight > j) {
                     //不能选该物品 等于上轮的最大价值
                     dp[i][j] = dp[i - 1][j];
                 }
@@ -32,7 +33,7 @@ public class Bag2 {
                     //上轮的最大价值
                     int proValue = dp[i - 1][j];
                     //选择该商品后的最大价值
-                    int curValue = values[i - 1] + dp[i - 1][j - weights[i - 1]];
+                    int curValue = values[i - 1] + dp[i - 1][j - weight];
                     //两者取最大值
                     dp[i][j] = Math.max(proValue, curValue);
                 }
