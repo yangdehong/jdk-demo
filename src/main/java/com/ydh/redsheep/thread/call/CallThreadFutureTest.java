@@ -17,6 +17,7 @@ public class CallThreadFutureTest {
         //提交任务并获取执行结果，
         // execute没有返回值，submit有返回值。可以提交Callable或者Runnable的实现类
         Future<Integer> future = executor.submit(task);
+
         try {
             System.out.println("主线程在执行任务");
             // 这里会阻塞，知道获取到结果

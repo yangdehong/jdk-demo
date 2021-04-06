@@ -1,4 +1,4 @@
-package com.ydh.redsheep.thread.pool.countdownlatch;
+package com.ydh.redsheep.thread.juctool.countdownlatch;
 
 import com.ydh.redsheep.thread.pool.mypoll.MyExecutors;
 
@@ -25,8 +25,6 @@ public class CountDownLatchTest {
 
     public static void main(String[] args) throws InterruptedException {
 
-        // 开始的倒数锁
-//        final countdownlatch begin = new countdownlatch(1);
         // 结束的倒数锁
         final CountDownLatch end = new CountDownLatch(10);
         // 10名选手
@@ -36,7 +34,6 @@ public class CountDownLatchTest {
             final int no = index + 1;
             exec.execute(() -> {
                 try {
-//                    begin.await();//一直阻塞
                     Thread.sleep(new Random().nextInt(100));
                     System.out.println("No." + no + " arrived");
                 } catch (InterruptedException e) {
@@ -46,7 +43,6 @@ public class CountDownLatchTest {
             });
         }
         System.out.println("Game Start");
-//        begin.countDown();
         end.await();
         System.out.println("Game Over");
         exec.shutdown();

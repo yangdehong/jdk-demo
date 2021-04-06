@@ -1,4 +1,4 @@
-package com.ydh.redsheep.thread.pool.semaphore;
+package com.ydh.redsheep.thread.juctool.semaphore;
 
 import com.ydh.redsheep.thread.pool.mypoll.MyExecutors;
 

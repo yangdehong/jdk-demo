@@ -1,24 +1,20 @@
-package com.ydh.redsheep.thread.pool.cyclicbarrier;
+package com.ydh.redsheep.thread.juctool.phaser;
 
+import com.ydh.redsheep.thread.juctool.cyclicbarrier.CyclicBarrierTest;
 import com.ydh.redsheep.thread.pool.mypoll.MyExecutors;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Phaser;
 
 /**
- * @description: 一个同步辅助类，它允许一组线程互相等待，直到到达某个公共屏障点 (common barrier point)。
- * 在涉及一组固定大小的线程的程序中，这些线程必须不时地互相等待，此时 cyclicbarrier 很有用。
- * 因为该 barrier 在释放等待线程后可以重用，所以称它为循环的 barrier。
- * cyclicbarrier 支持一个可选的 Runnable 命令，在一组线程中的最后一个线程到达之后（但在释放所有线程之前），
- * 该命令只在每个屏障点运行一次。若在继续所有参与线程之前更新共享状态，此屏障操作很有用。
- * <p>
- * 下面是一个在并行分解设计中使用 barrier 的例子，很经典的旅行团例子：
- * @author: yangdehong
- * @version: 2018/3/11.
- */
-public class CyclicBarrierTest {
+* 代替CyclicBarrier
+* @author : yangdehong
+* @date : 2021/2/28 12:15
+*/
+public class PhaserTest2 {
 
     /**
      * 徒步需要的时间: Shenzhen, Guangzhou, Shaoguan, Changsha, Wuhan
@@ -35,10 +31,10 @@ public class CyclicBarrierTest {
 
     static class Tour implements Runnable {
         private int[] times;
-        private CyclicBarrier barrier;
+        private Phaser barrier;
         private String tourName;
 
-        public Tour(CyclicBarrier barrier, String tourName, int[] times) {
+        public Tour(Phaser barrier, String tourName, int[] times) {
             this.times = times;
             this.tourName = tourName;
             this.barrier = barrier;
@@ -49,10 +45,10 @@ public class CyclicBarrierTest {
             try {
                 Thread.sleep(times[0] * 1000);
                 System.out.println(LocalDateTime.now() + tourName + " Reached Shenzhen");
-                barrier.await();
+                barrier.arrive();
                 Thread.sleep(times[1] * 1000);
                 System.out.println(LocalDateTime.now() + tourName + " Reached Guangzhou");
-                barrier.await();
+                barrier.arrive();
 //                Thread.sleep(times[2] * 1000);
 //                System.out.println(LocalDateTime.now() + tourName + " Reached Shaoguan");
 //                barrier.await();
@@ -62,15 +58,14 @@ public class CyclicBarrierTest {
 //                Thread.sleep(times[4] * 1000);
 //                System.out.println(LocalDateTime.now() + tourName + " Reached Wuhan");
 //                barrier.await();
-            } catch (InterruptedException e) {
-            } catch (BrokenBarrierException e) {
+            } catch (Exception e) {
             }
         }
     }
 
     public static void main(String[] args) {
         // 三个旅行团
-        CyclicBarrier barrier = new CyclicBarrier(3);
+        Phaser barrier = new Phaser(3);
         ExecutorService exec = MyExecutors.newFixedThreadPool(3, "cyclicbarrier");
         exec.submit(new Tour(barrier, "WalkTour", timeWalk));
         exec.submit(new Tour(barrier, "SelfTour", timeSelf));

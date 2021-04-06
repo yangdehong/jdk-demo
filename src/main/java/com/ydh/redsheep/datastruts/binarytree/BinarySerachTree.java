@@ -117,13 +117,13 @@ public class BinarySerachTree {
         bst.insertNode(9);
         bst.insertNode(12);
 
-        bst.beforeTraver(bst.root);
-        System.out.println("===========================");
+//        bst.beforeTraver(bst.root);
+//        System.out.println("===========================");
         bst.midTraver(bst.root);
-        System.out.println("=============================");
-        bst.afterTraver(bst.root);
-        System.out.println("==============================");
-        bst.levelTraver(bst.root);
+//        System.out.println("=============================");
+//        bst.afterTraver(bst.root);
+//        System.out.println("==============================");
+//        bst.levelTraver(bst.root);
 
     }
 
