@@ -16,22 +16,9 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <mapstruct.version>1.2.0.Final</mapstruct.version>
     </properties>
 
     <dependencies>
-
-        <!--    mapstruct的bean拷贝    -->
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-jdk8</artifactId>
-            <version>${mapstruct.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
-            <version>${mapstruct.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>org.apache.commons</groupId>
